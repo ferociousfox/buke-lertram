@@ -1,13 +1,13 @@
 /* For testing only */
 
-*:not(body):not(html):not(.wrapper){
+/**:not(body):not(html):not(.wrapper){
   box-sizing:border-box;
   border:1px dashed #000;
 }
 
 .columns{
   min-height: 100px;
-}
+}*/
 
 /* End for testing */
 
@@ -36,10 +36,12 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-
+body {
+  background-color: #f4a1a5;
+  color: white;
+}
 .box-div * {
   height: 22vh;
-  background-color: salmon;
   margin-top: 5%;
 }
 .blurbs li {
@@ -51,40 +53,68 @@ time, mark, audio, video {
 ul {
   list-style: none;
 }
+.icons img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+h3 {
+  display: inline-flex;
+  font-size: 33px;
+  vertical-align: top;
+}
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+}
+.circle-img img {
+  border-radius: 50%;
+  max-width: 100%;
+  height:auto;
+}
+.info * {
+  vertical-align: middle;
+
+}
+.the-other-secret {
+  display: none;
+}
 @media screen and (min-width: 768px) {
   .box-div * {
     height: 22vh;
-    background-color: salmon;
     margin-top: 0;
   }
-
+  .the-other-secret {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 992px) {
-  .box-div {
-    width: calc(100% / 3 - 30px);
-    float: left;
-  }
+
   .box-div * {
-    height: 15vh;
-    background-color: salmon;
+    height: 20vh;
     margin-top: 5%;
+    display: none;
+  }
+  .the-other-secret {
     display: block;
   }
-  .blurbs {
-    width: calc(100% / 3 - 30px);
-    float: left;
+  .the-other-secret img {
+    width: 100%;
   }
-  .icons {
-    width: calc(100% / 3 - 30px);
-    float: left;
-  }
-
 }
 
 @media screen and (min-width: 1280px) {
   .box-div * {
-    max-width: 350px;
+    display: none;
   }
-
+  .the-other-secret {
+    display: block;
+  }
+  .the-other-secret img {
+    width: 100%;
+  }
 }
